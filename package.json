@@ -1,0 +1,22 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Landing page Portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olgapog/Portfolio.git"
+  },
+  "author": "Olga Pogrebna",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/olgapog/Portfolio/issues"
+  },
+  "homepage": "https://github.com/olgapog/Portfolio#readme",
+  "devDependencies": {
+    "sass": "^1.99.0"
+  }
+}
