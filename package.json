@@ -4,7 +4,9 @@
   "description": "Landing page Portfolio",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "compile:sass": "sass sass/main.scss css/style.css -w",
+    "server": "live-server",
+    "dev": "run-p compile:sass server"
   },
   "repository": {
     "type": "git",
@@ -17,6 +19,7 @@
   },
   "homepage": "https://github.com/olgapog/Portfolio#readme",
   "devDependencies": {
+    "npm-run-all": "^4.1.5",
     "sass": "^1.99.0"
   }
 }
