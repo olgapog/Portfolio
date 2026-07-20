@@ -1,0 +1,32 @@
+@use 'variables' as *;
+
+.header {
+  padding: 3rem 0;
+
+  &__list {
+    list-style: none;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 3.2rem;
+  }
+
+  &__item {
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      color: $color-tx;
+      text-decoration: none;
+      font-size: 1.2rem;
+      font-weight: 200;
+      transition: all 0.2s;}
+    
+      &:hover,
+      &:active {
+        color: $color-accent;
+        transition: all 0.2s;
+      }
+  }
+}

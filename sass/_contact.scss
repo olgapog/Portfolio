@@ -1,0 +1,10 @@
+@use "variables" as *;
+
+.contact {
+
+  &__links {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+}

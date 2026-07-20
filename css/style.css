@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: inherit;
+  letter-spacing: 0.15rem;
 }
 
 html {
@@ -17,12 +18,35 @@ body {
   color: #E2E8F0;
   font-weight: 400;
   font-size: 1.6rem;
+  line-height: 1.5;
 }
 
 .container {
   width: 85%;
   max-width: 120rem;
   margin: 0 auto;
+}
+
+.header {
+  padding: 3rem 0;
+}
+.header__list {
+  list-style: none;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 3.2rem;
+}
+.header__link:link, .header__link:visited {
+  color: #E2E8F0;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 200;
+  transition: all 0.2s;
+}
+.header__link:hover, .header__link:active {
+  color: #00F5FF;
+  transition: all 0.2s;
 }
 
 .experience__tech-logos {

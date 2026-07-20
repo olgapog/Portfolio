@@ -1,6 +1,4 @@
-$color-primary:#00F5FF;
-$color-secondary: #E2E8F0;
-
+@use "variables" as *;
 
 *,
 *::after,
@@ -8,6 +6,7 @@ $color-secondary: #E2E8F0;
   margin: 0;
   padding: 0;
   box-sizing: inherit;
+  letter-spacing: 0.15rem;
 }
 
 html {
@@ -16,11 +15,12 @@ html {
 }
 
 body {
-  background-color: #070240;
-  font-family: "Inter", sans-serif;
-  color: $color-secondary;
+  background-color: $color-bg;
+  font-family: $font-main;
+  color: $color-tx;
   font-weight: 400;
   font-size: 1.6rem;
+  line-height: 1.5;
 }
 
 .container {
@@ -29,45 +29,5 @@ body {
   margin: 0 auto;
 }
 
-.experience {
-  &__tech-logos {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
 
-  &__icon {
-    width: 6rem;
-    height: 6rem;
-    object-fit: contain;
-  }
-}
-
-.projects {
-  &__gallery {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  &__card {
-    max-width: 30rem;
-    height: 20rem;
-    overflow: hidden;
-  }
-  
-  &__image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-}
-
-.contact {
-
-  &__links {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-  }
-}
 

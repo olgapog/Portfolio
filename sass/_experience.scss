@@ -1,0 +1,15 @@
+@use "variables" as *;
+
+.experience {
+  &__tech-logos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__icon {
+    width: 6rem;
+    height: 6rem;
+    object-fit: contain;
+  }
+}

@@ -1,1 +1,9 @@
+@use "variables" as *;
 @use "base";
+
+@use "header";
+@use "hero";
+@use 'experience';
+@use 'about';
+@use 'projects';
+@use 'contact';
