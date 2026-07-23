@@ -17,16 +17,21 @@
   &__link {
     &:link,
     &:visited {
+      display: inline-block;
       color: $color-tx;
       text-decoration: none;
       font-size: 1.2rem;
       font-weight: 200;
-      transition: all 0.2s;}
-    
-      &:hover,
-      &:active {
-        color: $color-accent;
-        transition: all 0.2s;
-      }
+      transition: all 0.2s;
+    }
+
+    &:hover,
+    &:active {
+    text-transform: uppercase;
+    font-weight: bold;
+      color: $color-accent;
+      transform: scale(1.1);
+      transition: all 0.2s;
+    }
   }
 }

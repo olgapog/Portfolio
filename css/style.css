@@ -38,6 +38,7 @@ body {
   gap: 3.2rem;
 }
 .header__link:link, .header__link:visited {
+  display: inline-block;
   color: #E2E8F0;
   text-decoration: none;
   font-size: 1.2rem;
@@ -45,8 +46,80 @@ body {
   transition: all 0.2s;
 }
 .header__link:hover, .header__link:active {
+  text-transform: uppercase;
+  font-weight: bold;
   color: #00F5FF;
+  transform: scale(1.1);
   transition: all 0.2s;
+}
+
+.hero {
+  text-align: center;
+  margin: 15rem 0;
+}
+
+.content__accent-text {
+  color: #00F5FF;
+  font-weight: bold;
+}
+.content__btn, .content__btn:link, .content__btn:visited {
+  display: inline-block;
+  text-decoration: none;
+  padding: 1.5rem 4rem;
+  margin-top: 5rem;
+  border-radius: 10rem;
+  text-transform: uppercase;
+  transition: all 0.2s;
+  position: relative;
+  border: none;
+  cursor: pointer;
+}
+.content__btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  font-weight: bold;
+}
+.content__btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+.content__btn:active, .content__btn:focus {
+  outline: none;
+  transform: translateY(-1px);
+  box-shadow: 0 0.5rem rgba(0, 0, 0, 0.2);
+}
+.content__btn--accent {
+  background-color: #00F5FF;
+}
+.content__btn--accent::after {
+  background-color: #00F5FF;
+}
+.content__btn--blue {
+  background-color: #070240;
+  color: #00F5FF;
+}
+.content__btn--blue::after {
+  background-color: #070240;
+}
+.content__btn--animated {
+  animation: moveInBotton 0.5s ease-in-out 0.75s;
+  animation-fill-mode: backwards;
+}
+.content__btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 10rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s;
+}
+
+h1 {
+  font-weight: 300;
 }
 
 .experience__tech-logos {
