@@ -1,17 +1,23 @@
 @use 'variables' as *;
 .hero {
-    text-align: center;
-    margin: 15rem 0;
+  text-align: center;
+  margin: 15rem 0;
+}
+
+.content {
+  &__accent-text {
+    color: $color-accent;
   }
 
-  
+  backface-visibility: hidden;
 
-  .content {
+  &__animation-left {
+    animation: moveInLeft 3s ease-out;
+  }
 
-    &__accent-text {
-      color: $color-accent;
-      font-weight: bold;
-    }
+  &__animation-right {
+    animation: moveInRight 3s ease-out;
+  }
 
   &__btn {
     &,
@@ -25,52 +31,42 @@
       text-transform: uppercase;
       transition: all 0.2s;
       position: relative;
-  
+
       border: none;
       cursor: pointer;
     }
-  
+
     &:hover {
       transform: translateY(-3px);
       box-shadow: 0 1rem 2rem rgba($color: #000000, $alpha: 0.2);
       font-weight: bold;
-  
+
       &::after {
         transform: scaleX(1.4) scaleY(1.6);
         opacity: 0;
       }
     }
-  
+
     &:active,
     &:focus {
       outline: none;
       transform: translateY(-1px);
       box-shadow: 0 0.5rem rgba($color: #000000, $alpha: 0.2);
     }
-  
+
     &--accent {
       background-color: $color-accent;
-  
+
       &::after {
         background-color: $color-accent;
       }
-  
     }
-  
-    &--blue {
-      background-color: $color-bg;
-      color: $color-accent;
-  
-      &::after {
-        background-color: $color-bg;
-      }
-    } 
-  
+
     &--animated {
-      animation: moveInBotton 0.5s ease-in-out 0.75s;
+      animation: moveInBotton 1.5s ease-in-out 0.75s;
       animation-fill-mode: backwards;
     }
-    
+
     &::after {
       content: '';
       display: inline-block;

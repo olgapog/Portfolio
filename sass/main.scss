@@ -1,5 +1,6 @@
 @use "variables" as *;
 @use "base";
+@use 'animation';
 
 @use "header";
 @use "hero";
@@ -7,3 +8,4 @@
 @use 'about';
 @use 'projects';
 @use 'contact';
+
