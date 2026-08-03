@@ -1,15 +1,66 @@
-@use "variables" as *;
+@use 'variables' as *;
 
 .experience {
+  &__subtitle {
+    text-align: center;
+    text-transform: uppercase;
+    color: $color-accent;
+    font-weight: 200;
+
+    opacity: 0;
+    animation: $animation-FadeInUp;
+    animation-delay: 2.3s;
+  }
+
   &__tech-logos {
+    padding: 5rem 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    flex-wrap: wrap;
+    gap: 2rem 0;
+
+    @media (max-width: 768px) {
+      justify-content: center;
+      gap: 1.5rem;
+    }
+  }
+
+  &__icon-wrapper {
+    opacity: 0;
+    animation: $animation-FadeInUp;
+
+    @for $i from 1 through 8 {
+      &:nth-of-type(#{$i}) {
+        animation-delay: #{2.5 + ($i * 0.18)}s;
+      }
+    }
   }
 
   &__icon {
     width: 6rem;
     height: 6rem;
-    object-fit: contain;
+    cursor: pointer;
+
+    filter: grayscale(60%);
+    opacity: 0.7;
+
+    transition: 
+    transform 0.3s ease,
+    filter 0.3s ease,
+    opacity 0.3s ease;
+    will-change: transform, filter, opacity;
+
+    &:hover {
+      opacity: 1;
+      filter: grayscale(0%) drop-shadow(0 0 10px rgba($color-accent, 0.5));
+      transform: translateY(-0.4rem) scale(1.08);
+    }
+
+    @media (max-width: 768px) {
+      width: 4rem;
+      height: 4rem;
+    }
   }
 }

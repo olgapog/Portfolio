@@ -1,7 +1,7 @@
 @use 'variables' as *;
 .hero {
   text-align: center;
-  margin: 15rem 0;
+  margin-top: 8rem;
 }
 
 .content {
@@ -9,14 +9,33 @@
     color: $color-accent;
   }
 
-  backface-visibility: hidden;
+  &__animation {
+    opacity: 0;
+    animation: $animation-FadeInUp;
 
-  &__animation-left {
-    animation: moveInLeft 3s ease-out;
+    &:nth-child(1) {
+      animation-delay: 0.6s;
+    }
+
+    &:nth-child(2) {
+      animation-delay: 0.95s;
+    }
+
+    &:nth-child(3) {
+      animation-delay: 1.3s;
+    }
   }
 
-  &__animation-right {
-    animation: moveInRight 3s ease-out;
+  h1 {
+    font-weight: 300;
+  }
+
+  &__btn-wrapper {
+    display: inline-block;
+    margin-top: 2.5rem;
+    opacity: 0;
+    animation: $animation-FadeInUp;
+    animation-delay: 1.8s;
   }
 
   &__btn {
@@ -26,62 +45,30 @@
       display: inline-block;
       text-decoration: none;
       padding: 1.5rem 4rem;
-      margin-top: 5rem;
-      border-radius: 10rem;
+      border-radius: $border-radius-pill;
       text-transform: uppercase;
-      transition: all 0.2s;
-      position: relative;
+      font-size: 1.4rem;
+      color: $color-bg;
+      font-weight: 600;
 
       border: none;
       cursor: pointer;
+      background-color: $color-accent;
+
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     &:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 1rem 2rem rgba($color: #000000, $alpha: 0.2);
-      font-weight: bold;
-
-      &::after {
-        transform: scaleX(1.4) scaleY(1.6);
-        opacity: 0;
-      }
+      transform: translateY(-0.4rem);
+      box-shadow: 0 0.8rem 2.5rem rgba($color-accent, 0.4),
+        0 0.2rem 1rem rgba(0, 0, 0, 0.2);
     }
 
     &:active,
     &:focus {
       outline: none;
-      transform: translateY(-1px);
-      box-shadow: 0 0.5rem rgba($color: #000000, $alpha: 0.2);
-    }
-
-    &--accent {
-      background-color: $color-accent;
-
-      &::after {
-        background-color: $color-accent;
-      }
-    }
-
-    &--animated {
-      animation: moveInBotton 1.5s ease-in-out 0.75s;
-      animation-fill-mode: backwards;
-    }
-
-    &::after {
-      content: '';
-      display: inline-block;
-      height: 100%;
-      width: 100%;
-      border-radius: 10rem;
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: -1;
-      transition: all 0.4s;
+      transform: translateY(-0.1rem);
+      box-shadow: 0 0.4rem 1.2rem rgba($color-accent, 0.3);
     }
   }
-}
-
-h1 {
-  font-weight: 300;
 }

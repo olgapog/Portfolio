@@ -2,16 +2,16 @@
 
 .header {
   padding: 3rem 0;
+  opacity: 0;
+  animation: fadeInDown 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 0.1s;
 
   &__list {
     list-style: none;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     align-items: center;
-    gap: 3.2rem;
-  }
-
-  &__item {
+    gap: 1.2rem;
   }
 
   &__link {
@@ -20,18 +20,25 @@
       display: inline-block;
       color: $color-tx;
       text-decoration: none;
-      font-size: 1.2rem;
-      font-weight: 200;
-      transition: all 0.2s;
+      font-size: 1.3rem;
+      font-weight: 300;
+      letter-spacing: 0.1rem;
+      text-transform: uppercase;
+      padding: 0.8rem 1.8rem;
+      border-radius: $border-radius-pill;
+      border: 0.1rem solid transparent;
+      transition: all 0.3s ease;
     }
 
     &:hover,
     &:active {
-    text-transform: uppercase;
-    font-weight: 500;
       color: $color-accent;
-      transform: scale(1.1);
-      transition: all 0.2s;
+      background: rgba(255, 255, 255, 0.04);
+      border-color: rgba($color-accent, 0.3);
+
+      transform: translateY(-0.2rem);
+      box-shadow: 0 0.4rem 1.2rem rgba(0, 0, 0, 0.15),
+        0 0 0.8rem rgba($color-accent, 0.15);
     }
   }
 }
