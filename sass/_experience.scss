@@ -1,5 +1,6 @@
 @use 'variables' as *;
 
+
 .experience {
   &__subtitle {
     text-align: center;
@@ -13,7 +14,7 @@
   }
 
   &__tech-logos {
-    padding: 5rem 0;
+    padding: $padding-top;
     display: flex;
     justify-content: space-between;
     align-items: center;

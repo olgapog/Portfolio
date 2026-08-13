@@ -1,1 +1,73 @@
-@use "variables" as *;
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.about {
+  &__h2 {
+    margin-bottom: 5rem;
+
+    @include scroll-reveal($delay: 0s);
+  }
+
+  &__text-wrapper {
+    @include scroll-reveal($delay: 0.2s);
+  }
+
+  &.visible {
+    .about__h2,
+    .about__text-wrapper {
+      @extend %visible-state;
+    }
+  }
+
+  &__text-wrapper {
+    max-width: 75rem;
+    margin: 0 auto;
+
+    transition: border-color 0.4s ease, box-shadow 0.4s ease,
+      transform 0.4s ease;
+  }
+
+  &__card {
+    padding: 3.4rem 4rem;
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.05) 0%,
+      rgba(255, 255, 255, 0.05) 100%
+    );
+
+    backdrop-filter: blur(1.2rem);
+    border: 0.1rem solid rgba(255, 255, 255, 0.12);
+    border-radius: $border-radius-pill;
+
+    box-shadow: 0 0.8rem 3.2rem rgba(0, 0, 0, 0.25),
+      0 0 1.5rem rgba($color-accent, 0.08),
+      inset 0 0 1.5rem rgba($color-accent, 0.3);
+
+    transition: border-color 0.4s ease, box-shadow 0.4s ease,
+      transform 0.4s ease, background-color 0.4s ease;
+
+    &:hover {
+      border-color: rgba($color-accent, 0.4);
+      background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.07) 0%,
+        rgba(255, 255, 255, 0.02) 100%
+      );
+
+      box-shadow: 0 1.2rem 3.5rem rgba(0, 0, 0, 0.3),
+        0 0 2.5rem rgba($color-accent, 0.25),
+        inset 0 0 2.5rem rgba($color-accent, 0.08);
+
+      transform: translateY(-0.4rem);
+    }
+
+    p {
+      font-size: 1.5rem;
+      line-height: 1.8;
+
+      &:not(:last-child) {
+        margin-bottom: 1.8rem;
+      }
+    }
+  }
+}
