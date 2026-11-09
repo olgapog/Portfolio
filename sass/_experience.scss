@@ -1,5 +1,5 @@
 @use 'variables' as *;
-
+@use 'mixins' as *;
 
 .experience {
   &__subtitle {
@@ -11,22 +11,34 @@
     opacity: 0;
     animation: $animation-FadeInUp;
     animation-delay: 2.3s;
+
   }
 
   &__tech-logos {
-    padding: $padding-top;
+    padding: $padding-top-bottom;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    flex-wrap: wrap;
-    gap: 2rem 0;
 
-    @media (max-width: 768px) {
-      justify-content: center;
-      gap: 1.5rem;
+    @media (max-width: 767.98px) {
+      padding: 5rem 0 8rem 0;
+
+      justify-content: space-around;
+      gap: 2rem;
+    }
+
+    @media (max-width: 575.98px) {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      justify-items: center;
+     
+      gap: 3rem 2rem;
+      padding: 5rem 0;
+      
     }
   }
+
 
   &__icon-wrapper {
     opacity: 0;
@@ -47,19 +59,16 @@
     filter: grayscale(60%);
     opacity: 0.7;
 
-    transition: 
-    transform 0.3s ease,
-    filter 0.3s ease,
-    opacity 0.3s ease;
+    transition: transform 0.3s ease, filter 0.3s ease, opacity 0.3s ease;
     will-change: transform, filter, opacity;
 
     &:hover {
       opacity: 1;
       filter: grayscale(0%) drop-shadow(0 0 10px rgba($color-accent, 0.5));
       transform: translateY(-0.4rem) scale(1.08);
-    }
+    } 
 
-    @media (max-width: 768px) {
+    @media (max-width: 767.98px) {
       width: 4rem;
       height: 4rem;
     }

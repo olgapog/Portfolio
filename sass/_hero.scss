@@ -1,9 +1,8 @@
 @use 'variables' as *;
-
+@use 'mixins' as *;
 
 .hero {
   text-align: center;
-  margin-top: 8rem;
 }
 
 .content {
@@ -29,15 +28,31 @@
   }
 
   h1 {
+    font-size: 4.8rem;
     font-weight: 300;
+
+    @media (max-width: 767.98px) {
+      font-size: 2.4rem;
+    }
   }
 
   &__btn-wrapper {
     display: inline-block;
-    margin-top: 2.5rem;
+    padding-top: 5rem;
+    padding-bottom: 8rem;
+    
+    
     opacity: 0;
     animation: $animation-FadeInUp;
     animation-delay: 1.8s;
+
+    @media (max-width: 767.98px) {
+      padding-top: 2.5rem;
+    }
+
+    @media (max-width: 575.98px) {
+      padding-bottom: 5rem;
+    }
   }
 
   &__btn {
@@ -58,11 +73,16 @@
       background-color: $color-accent;
 
       transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+      @media (max-width: 767.98px) {
+        padding: 1.2rem 2.5rem;
+        font-size: 1.3rem;
+      }
     }
 
     &:hover {
       transform: translateY(-0.4rem);
-      box-shadow: 0 0.8rem 2.5rem rgba($color-accent, 0.4),
+      box-shadow: 0 0.8rem 2rem rgba($color-accent, 0.3),
         0 0.2rem 1rem rgba(0, 0, 0, 0.2);
     }
 

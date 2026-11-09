@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg" />
 
     <link rel="stylesheet" href="css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -16,9 +17,13 @@
     <title>Portfolio</title>
   </head>
 
-  <body>
-    <header class="header">
-      <div class="container">
+  <body id="top">
+    <header class="header margin-bottom">
+      <div class="container header__container">
+        <a href="#top" class="header__logo"
+          >O<span class="header__logo-dot">.</span></a
+        >
+
         <ul class="header__list">
           <li>
             <a href="#about" class="header__link">About</a>
@@ -270,16 +275,24 @@
         <div class="about__text-wrapper">
           <div class="about__card">
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam
-              beatae hic expedita veniam asperiores est ullam iure, ratione
-              perspiciatis minus incidunt nobis? Consequatur beatae in maiores
-              quae deserunt ad voluptatibus?
+              I'm a passionate
+              <span class="about__accent">Junior Frontend Developer</span> who
+              loves turning clean code into beautiful, responsive web
+              experiences.
             </p>
+
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam
-              beatae hic expedita veniam asperiores est ullam iure, ratione
-              perspiciatis minus incidunt nobis? Consequatur beatae in maiores
-              quae deserunt ad voluptatibus?
+              While my journey started with intensive training and hands-on
+              projects, I bring <span class="about__accent">fresh energy</span>,
+              strong attention to detail and a constant drive to learn. Every
+              project is a chance to turn complex layout challenges into
+              seamless digital products.
+            </p>
+
+            <p>
+              <span class="about__accent"
+                >Ready to build something amazing together!</span
+              >
             </p>
           </div>
         </div>
@@ -301,7 +314,11 @@
               <div class="projects__overlay">
                 <h3 class="projects__title">Guess My Number</h3>
                 <p class="projects__desc">JavaScript game project</p>
-                <a href="https://olgapog.github.io/Guess_My_Number/" class="projects__link" target="_blank" rel="noopener"
+                <a
+                  href="https://olgapog.github.io/Guess_My_Number/"
+                  class="projects__link"
+                  target="_blank"
+                  rel="noopener"
                   >View Project &rarr;</a
                 >
               </div>
@@ -318,7 +335,11 @@
               <div class="projects__overlay">
                 <h3 class="projects__title">Natours</h3>
                 <p class="projects__desc">Landing page with modern Css</p>
-                <a href="https://olgapog.github.io/Natours/" class="projects__link" target="_blank" rel="noopener"
+                <a
+                  href="https://olgapog.github.io/Natours/"
+                  class="projects__link"
+                  target="_blank"
+                  rel="noopener"
                   >View Project &rarr;</a
                 >
               </div>
@@ -331,7 +352,11 @@
               <div class="projects__overlay">
                 <h3 class="projects__title">Nexter</h3>
                 <p class="projects__desc">Real estate grid layout</p>
-                <a href="https://olgapog.github.io/Nexter/" class="projects__link" target="_blank" rel="noopener"
+                <a
+                  href="https://olgapog.github.io/Nexter/"
+                  class="projects__link"
+                  target="_blank"
+                  rel="noopener"
                   >View Project &rarr;</a
                 >
               </div>
@@ -341,80 +366,92 @@
       </div>
     </section>
 
-    <section id="contact" class="contact section-animate margin-bottom">
+    <section id="contact" class="contact margin-bottom section-animate">
       <div class="container">
-        <h2>Contact</h2>
+        <h2 class="contact__h2">Contact</h2>
         <div class="contact__links">
-          <a
-            href="mailto:olga.pogrebnya@live.com"
-            class="contact__link"
-            target="_blank"
-            aria-label="Email"
-          >
-            <svg
-              class="contact__icon"
-              width="97"
-              height="78"
-              viewBox="0 0 97 78"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
+          <div class="contact__links-wrapper">
+            <a
+              href="mailto:olga.pogrebnya@live.com"
+              class="contact__link"
+              target="_blank"
+              aria-label="Email"
             >
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M10.6333 5.8L47.1733 33.205C47.508 33.456 47.915 33.5917 48.3333 33.5917C48.7516 33.5917 49.1587 33.456 49.4933 33.205L86.0333 5.8H10.6333ZM90.8667 9.425L52.9733 37.845C51.6347 38.849 50.0066 39.3917 48.3333 39.3917C46.6601 39.3917 45.0319 38.849 43.6933 37.845L5.8 9.425V71.5333H90.8667V9.425ZM4.83333 0H91.8333C93.1152 0 94.3446 0.509226 95.251 1.41565C96.1574 2.32208 96.6667 3.55145 96.6667 4.83333V72.5C96.6667 73.7819 96.1574 75.0113 95.251 75.9177C94.3446 76.8241 93.1152 77.3333 91.8333 77.3333H4.83333C3.55145 77.3333 2.32208 76.8241 1.41565 75.9177C0.509224 75.0113 0 73.7819 0 72.5V4.83333C0 3.55145 0.509224 2.32208 1.41565 1.41565C2.32208 0.509226 3.55145 0 4.83333 0Z"
-                fill="#00F5FF"
-              />
-            </svg>
-          </a>
+              <svg
+                class="contact__icon"
+                width="97"
+                height="78"
+                viewBox="0 0 97 78"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M10.6333 5.8L47.1733 33.205C47.508 33.456 47.915 33.5917 48.3333 33.5917C48.7516 33.5917 49.1587 33.456 49.4933 33.205L86.0333 5.8H10.6333ZM90.8667 9.425L52.9733 37.845C51.6347 38.849 50.0066 39.3917 48.3333 39.3917C46.6601 39.3917 45.0319 38.849 43.6933 37.845L5.8 9.425V71.5333H90.8667V9.425ZM4.83333 0H91.8333C93.1152 0 94.3446 0.509226 95.251 1.41565C96.1574 2.32208 96.6667 3.55145 96.6667 4.83333V72.5C96.6667 73.7819 96.1574 75.0113 95.251 75.9177C94.3446 76.8241 93.1152 77.3333 91.8333 77.3333H4.83333C3.55145 77.3333 2.32208 76.8241 1.41565 75.9177C0.509224 75.0113 0 73.7819 0 72.5V4.83333C0 3.55145 0.509224 2.32208 1.41565 1.41565C2.32208 0.509226 3.55145 0 4.83333 0Z"
+                  fill="#00F5FF"
+                />
+              </svg>
+            </a>
+          </div>
 
-          <a
-            href="https://github.com/olgapog?tab=repositories"
-            class="contact__link"
-            target="_blank"
-            aria-label="Github"
-          >
-            <svg
-              class="contact__icon"
-              width="70"
-              height="81"
-              viewBox="0 0 70 81"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
+          <div class="contact__links-wrapper">
+            <a
+              href="https://www.linkedin.com/in/olga-pogreb%C5%88a-569a18107/"
+              class="contact__link"
+              target="_blank"
+              aria-label="Linkedin"
             >
-              <path
-                d="M21.5625 77.8144V65.6569C21.5625 63.4144 22.2525 61.4644 23.3625 59.7019C24.1275 58.4944 23.6025 56.7769 22.2263 56.4019C10.815 53.2594 2.8125 48.2157 2.8125 31.4832C2.8125 27.1332 4.2375 23.0457 6.7425 19.4832C7.365 18.5982 7.68 18.1557 7.755 17.7582C7.83 17.3532 7.69875 16.8319 7.43625 15.7819C6.375 11.5219 6.44625 6.99568 8.03625 2.91943C8.03625 2.91943 11.325 1.84318 18.8138 6.51943C20.5238 7.58818 21.3788 8.12443 22.1325 8.24443C22.8863 8.36443 23.8912 8.11318 25.9012 7.61068C28.7751 6.89816 31.7267 6.5467 34.6875 6.56443C37.6483 6.55179 40.5993 6.90445 43.4738 7.61443C45.4838 8.11693 46.4925 8.36443 47.2463 8.24818C47.9963 8.12818 48.8512 7.59193 50.5612 6.52318C58.05 1.84693 61.3388 2.92318 61.3388 2.92318C62.9288 6.99943 63 11.5257 61.9388 15.7857C61.6763 16.8357 61.5488 17.3607 61.6238 17.7582C61.6988 18.1557 62.01 18.6019 62.6325 19.4869C65.1375 23.0494 66.5625 27.1369 66.5625 31.4869C66.5625 48.2194 58.56 53.2632 47.1487 56.3982C45.7725 56.7769 45.2475 58.4944 46.0125 59.6982C47.1225 61.4607 47.8125 63.4107 47.8125 65.6569V77.8144"
-                stroke="#00F5FF"
-                stroke-width="5.625"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </a>
+              <svg
+                class="contact__icon"
+                width="90"
+                height="87"
+                viewBox="0 0 90 87"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M87.6968 86.2621H69.4133C68.12 86.2621 67.0748 85.2169 67.0748 83.9236V54.4787C67.0748 44.3803 61.8661 44.3803 60.1476 44.3803C55.5236 44.3803 53.557 48.0299 52.9192 49.6068C52.618 50.3155 52.4762 51.5202 52.4762 53.2034V83.9415C52.4762 85.2348 51.431 86.28 50.1378 86.28H31.8366C31.2166 86.28 30.6141 86.032 30.1713 85.5892C29.7284 85.1464 29.4804 84.5437 29.498 83.9237C29.498 83.4277 29.7461 34.0517 29.498 29.0025C29.4626 28.3647 29.6929 27.7446 30.1358 27.284C30.5788 26.8233 31.1811 26.5576 31.8365 26.5576H50.1378C51.431 26.5576 52.4763 27.6028 52.4763 28.8961V30.278C55.559 27.5319 60.0058 25.2642 66.6318 25.2642C81.2834 25.2642 90.0353 35.3979 90.0353 52.3704V83.9236C90.0353 85.2169 88.99 86.2621 87.6968 86.2621ZM71.7519 81.5851L85.376 81.5847V52.3702C85.376 38.1083 78.5551 29.9411 66.6496 29.9411C58.6948 29.9411 54.8327 33.9096 52.4055 37.5415C52.122 38.4982 51.2184 39.207 50.1555 39.207H50.0316C49.181 39.207 48.4015 38.7462 47.9942 38.0022C47.6753 37.4175 47.6044 36.7443 47.817 36.1242V31.2168H34.2284C34.3524 40.9786 34.2284 72.5673 34.193 81.5673H47.7992V53.1853C47.7992 50.8291 48.0473 49.1283 48.5787 47.835C50.6339 42.7504 54.9566 39.6854 60.1299 39.6854C67.5 39.6854 71.7341 45.0714 71.7341 54.461V81.585H71.7521L71.7519 81.5851ZM21.7205 86.2617H3.41929C2.12598 86.2617 1.08079 85.2166 1.08079 83.9232V28.8959C1.08079 27.6026 2.12598 26.5573 3.41929 26.5573H21.7205C23.0138 26.5573 24.059 27.6026 24.059 28.8958V83.9233C24.059 85.2166 23.0138 86.2619 21.7205 86.2619V86.2617ZM5.75797 81.5848H19.3819V31.2343H5.75806L5.75797 81.5848ZM12.5787 23.7226L12.4546 23.7225C5.24399 23.7225 -9.15527e-05 18.7264 -9.15527e-05 11.8524C-9.15527e-05 4.99614 5.33258 0 12.7027 0C19.9487 0 25.122 4.85429 25.2638 11.7992C25.2638 18.7264 19.9311 23.7226 12.5787 23.7226ZM12.7027 4.69494C7.90145 4.69494 4.6771 7.58276 4.6771 11.8702C4.6771 16.0867 7.86612 19.0454 12.4547 19.0454H12.5786C17.3622 19.0454 20.5865 16.1575 20.5865 11.8702C20.4979 7.52959 17.3976 4.69494 12.7027 4.69494Z"
+                  fill="#00F5FF"
+                />
+              </svg>
+            </a>
+          </div>
 
-          <a
-            href="https://www.linkedin.com/in/olga-pogreb%C5%88a-569a18107/"
-            class="contact__link"
-            target="_blank"
-            aria-label="Linkedin"
-          >
-            <svg
-              class="contact__icon"
-              width="90"
-              height="87"
-              viewBox="0 0 90 87"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
+          <div class="contact__links-wrapper">
+            <a
+              href="https://github.com/olgapog?tab=repositories"
+              class="contact__link"
+              target="_blank"
+              aria-label="Github"
             >
-              <path
-                d="M87.6968 86.2621H69.4133C68.12 86.2621 67.0748 85.2169 67.0748 83.9236V54.4787C67.0748 44.3803 61.8661 44.3803 60.1476 44.3803C55.5236 44.3803 53.557 48.0299 52.9192 49.6068C52.618 50.3155 52.4762 51.5202 52.4762 53.2034V83.9415C52.4762 85.2348 51.431 86.28 50.1378 86.28H31.8366C31.2166 86.28 30.6141 86.032 30.1713 85.5892C29.7284 85.1464 29.4804 84.5437 29.498 83.9237C29.498 83.4277 29.7461 34.0517 29.498 29.0025C29.4626 28.3647 29.6929 27.7446 30.1358 27.284C30.5788 26.8233 31.1811 26.5576 31.8365 26.5576H50.1378C51.431 26.5576 52.4763 27.6028 52.4763 28.8961V30.278C55.559 27.5319 60.0058 25.2642 66.6318 25.2642C81.2834 25.2642 90.0353 35.3979 90.0353 52.3704V83.9236C90.0353 85.2169 88.99 86.2621 87.6968 86.2621ZM71.7519 81.5851L85.376 81.5847V52.3702C85.376 38.1083 78.5551 29.9411 66.6496 29.9411C58.6948 29.9411 54.8327 33.9096 52.4055 37.5415C52.122 38.4982 51.2184 39.207 50.1555 39.207H50.0316C49.181 39.207 48.4015 38.7462 47.9942 38.0022C47.6753 37.4175 47.6044 36.7443 47.817 36.1242V31.2168H34.2284C34.3524 40.9786 34.2284 72.5673 34.193 81.5673H47.7992V53.1853C47.7992 50.8291 48.0473 49.1283 48.5787 47.835C50.6339 42.7504 54.9566 39.6854 60.1299 39.6854C67.5 39.6854 71.7341 45.0714 71.7341 54.461V81.585H71.7521L71.7519 81.5851ZM21.7205 86.2617H3.41929C2.12598 86.2617 1.08079 85.2166 1.08079 83.9232V28.8959C1.08079 27.6026 2.12598 26.5573 3.41929 26.5573H21.7205C23.0138 26.5573 24.059 27.6026 24.059 28.8958V83.9233C24.059 85.2166 23.0138 86.2619 21.7205 86.2619V86.2617ZM5.75797 81.5848H19.3819V31.2343H5.75806L5.75797 81.5848ZM12.5787 23.7226L12.4546 23.7225C5.24399 23.7225 -9.15527e-05 18.7264 -9.15527e-05 11.8524C-9.15527e-05 4.99614 5.33258 0 12.7027 0C19.9487 0 25.122 4.85429 25.2638 11.7992C25.2638 18.7264 19.9311 23.7226 12.5787 23.7226ZM12.7027 4.69494C7.90145 4.69494 4.6771 7.58276 4.6771 11.8702C4.6771 16.0867 7.86612 19.0454 12.4547 19.0454H12.5786C17.3622 19.0454 20.5865 16.1575 20.5865 11.8702C20.4979 7.52959 17.3976 4.69494 12.7027 4.69494Z"
-                fill="#00F5FF"
-              />
-            </svg>
-          </a>
+              <svg
+                class="contact__icon"
+                width="70"
+                height="81"
+                viewBox="0 0 70 81"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M21.5625 77.8144V65.6569C21.5625 63.4144 22.2525 61.4644 23.3625 59.7019C24.1275 58.4944 23.6025 56.7769 22.2263 56.4019C10.815 53.2594 2.8125 48.2157 2.8125 31.4832C2.8125 27.1332 4.2375 23.0457 6.7425 19.4832C7.365 18.5982 7.68 18.1557 7.755 17.7582C7.83 17.3532 7.69875 16.8319 7.43625 15.7819C6.375 11.5219 6.44625 6.99568 8.03625 2.91943C8.03625 2.91943 11.325 1.84318 18.8138 6.51943C20.5238 7.58818 21.3788 8.12443 22.1325 8.24443C22.8863 8.36443 23.8912 8.11318 25.9012 7.61068C28.7751 6.89816 31.7267 6.5467 34.6875 6.56443C37.6483 6.55179 40.5993 6.90445 43.4738 7.61443C45.4838 8.11693 46.4925 8.36443 47.2463 8.24818C47.9963 8.12818 48.8512 7.59193 50.5612 6.52318C58.05 1.84693 61.3388 2.92318 61.3388 2.92318C62.9288 6.99943 63 11.5257 61.9388 15.7857C61.6763 16.8357 61.5488 17.3607 61.6238 17.7582C61.6988 18.1557 62.01 18.6019 62.6325 19.4869C65.1375 23.0494 66.5625 27.1369 66.5625 31.4869C66.5625 48.2194 58.56 53.2632 47.1487 56.3982C45.7725 56.7769 45.2475 58.4944 46.0125 59.6982C47.1225 61.4607 47.8125 63.4107 47.8125 65.6569V77.8144"
+                  stroke="#00F5FF"
+                  stroke-width="5.625"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </div>
         </div>
+
       </div>
+      
     </section>
+
+    <p class="copyright">
+      Copyright &copy; <span class="year">2027</span> Olga Pogrebna.<span class="copyright__reserved"> All rights reserved.</span>
+    </p>
 
     <script src="script.js"></script>
   </body>

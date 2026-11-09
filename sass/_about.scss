@@ -3,12 +3,18 @@
 
 .about {
   &__h2 {
-    margin-bottom: 5rem;
-
+    margin-bottom: 8rem;
     @include scroll-reveal($delay: 0s);
+
+    @media (max-width: 575.98px) {
+      margin-bottom: 5rem;
+    }
   }
 
   &__text-wrapper {
+    max-width: 75rem;
+    margin: 0 auto;
+
     @include scroll-reveal($delay: 0.2s);
   }
 
@@ -19,25 +25,13 @@
     }
   }
 
-  &__text-wrapper {
-    max-width: 75rem;
-    margin: 0 auto;
-
-    transition: border-color 0.4s ease, box-shadow 0.4s ease,
-      transform 0.4s ease;
-  }
-
   &__card {
-    padding: 3.4rem 4rem;
-    background: linear-gradient(
-      135deg,
-      rgba(255, 255, 255, 0.05) 0%,
-      rgba(255, 255, 255, 0.05) 100%
-    );
+    padding: 4rem 5rem;
+    background: rgba(255, 255, 255, 0.05);
 
     backdrop-filter: blur(1.2rem);
     border: 0.1rem solid rgba(255, 255, 255, 0.12);
-    border-radius: $border-radius-pill;
+    border-radius: 2.4rem;
 
     box-shadow: 0 0.8rem 3.2rem rgba(0, 0, 0, 0.25),
       0 0 1.5rem rgba($color-accent, 0.08),
@@ -62,12 +56,26 @@
     }
 
     p {
-      font-size: 1.5rem;
+      font-size: 1.8rem;
       line-height: 1.8;
+      font-weight: 300;
 
       &:not(:last-child) {
         margin-bottom: 1.8rem;
       }
     }
+
+    @media (max-width: 575.98px) {
+      padding: 3rem 2rem;
+      border-radius: 1.8rem;
+
+      p {
+        font-size: 1.4rem;
+      }
+    }
   }
+
+&__accent {
+  color: $color-accent;
+}  
 }

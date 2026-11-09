@@ -4,10 +4,14 @@
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1) $delay,
-    transform 1.2s cubic-bezier(0.16, 1, 0.3, 1) $delay;
+  transform 1.2s cubic-bezier(0.16, 1, 0.3, 1) $delay;
 }
 
 %visible-state {
   opacity: 1;
   transform: translateY(0);
+}
+
+@mixin scroll-offset($offset: 20rem) {
+  scroll-margin-top: $offset;
 }

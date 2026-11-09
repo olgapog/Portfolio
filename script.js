@@ -13,3 +13,7 @@ const observer = new IntersectionObserver(
 document.querySelectorAll('.section-animate').forEach((section) => {
   observer.observe(section);
 });
+
+const yearEl = document.querySelector(".year");
+const currentYear = new Date().getFullYear();
+yearEl.textContent = currentYear;

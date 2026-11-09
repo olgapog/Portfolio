@@ -1,5 +1,5 @@
 @use 'variables' as *;
-
+@use 'mixins' as *;
 
 .header {
   padding: 3rem 0;
@@ -7,11 +7,62 @@
   animation: fadeInDown 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   animation-delay: 0.1s;
 
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  background: linear-gradient(
+      135deg,
+      rgba(7, 2, 64, 0.92) 0%,
+      rgba(7, 2, 64, 0.85) 100%
+    ),
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.04) 0%,
+      rgba(255, 255, 255, 0.01) 100%
+    );
+
+  backdrop-filter: blur(1.2rem);
+  border-bottom: 0.1rem solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 0.8rem 3.2rem rgba(0, 0, 0, 0.25),
+    0 0 1.5rem rgba($color-accent, 0.08),
+    inset 0 0 1.5rem rgba($color-accent, 0.15);
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: 575.98px) {
+      flex-direction: column;
+      gap: 2rem;
+    }
+  }
+
+  &__logo {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-decoration: none;
+    letter-spacing: 0.05rem;
+    transition: opacity 0.3s ease;
+
+    &-dot {
+      color: $color-accent;
+      text-shadow: 0 0 0.8rem rgba($color-accent, 0.6);
+    }
+
+    &:hover {
+      opacity: 0.85;
+    }
+    @media (max-width: 575.98px) {
+      padding: 0.5rem 1rem;
+    }
+  }
+
   &__list {
     list-style: none;
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
     gap: 1.2rem;
   }
 
@@ -21,25 +72,36 @@
       display: inline-block;
       color: $color-tx;
       text-decoration: none;
-      font-size: 1.3rem;
+      font-size: 1.4rem;
       font-weight: 300;
       letter-spacing: 0.1rem;
       text-transform: uppercase;
-      padding: 0.8rem 1.8rem;
-      border-radius: $border-radius-pill;
-      border: 0.1rem solid transparent;
+      padding: 1.2rem 2rem;
       transition: all 0.3s ease;
     }
 
-    &:hover,
-    &:active {
-      color: $color-accent;
-      background: rgba(255, 255, 255, 0.04);
-      border-color: rgba($color-accent, 0.3);
+    @media (max-width: 767.98px) {
+      &:link,
+      &:visited {
+        padding: 1rem 1.4rem;
+      }
+    }
 
-      transform: translateY(-0.2rem);
-      box-shadow: 0 0.4rem 1.2rem rgba(0, 0, 0, 0.15),
-        0 0 0.8rem rgba($color-accent, 0.15);
+    @media (hover: hover) {
+      &:hover {
+        color: $color-accent;
+        transform: translateY(-0.2rem);
+      }
+    }
+
+    &:focus {
+      outline: none;
+      color: $color-accent;
+    }
+
+    &:active {
+      transform: translateY(0);
+      color: $color-accent;
     }
   }
 }
