@@ -37,6 +37,10 @@
       flex-direction: column;
       gap: 2rem;
     }
+
+    @media (max-width: 359.98px) {
+      gap: 1.5rem;
+    }
   }
 
   &__logo {
@@ -84,6 +88,13 @@
       &:link,
       &:visited {
         padding: 1rem 1.4rem;
+      }
+    }
+
+    @media (max-width: 359.98px) {
+      &:link,
+      &:visited {
+        padding: 1rem 1.2rem;
       }
     }
 

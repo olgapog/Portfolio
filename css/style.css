@@ -113,6 +113,11 @@ h2 {
     gap: 2rem;
   }
 }
+@media (max-width: 359.98px) {
+  .header__container {
+    gap: 1.5rem;
+  }
+}
 .header__logo {
   font-size: 2.2rem;
   font-weight: 700;
@@ -152,6 +157,11 @@ h2 {
 @media (max-width: 767.98px) {
   .header__link:link, .header__link:visited {
     padding: 1rem 1.4rem;
+  }
+}
+@media (max-width: 359.98px) {
+  .header__link:link, .header__link:visited {
+    padding: 1rem 1.2rem;
   }
 }
 @media (hover: hover) {
@@ -626,11 +636,6 @@ h2 {
   color: #767676;
   text-align: center;
   margin-bottom: 5rem;
-}
-@media (max-width: 575.98px) {
-  .copyright__reserved {
-    display: block;
-  }
 }
 
 /*# sourceMappingURL=style.css.map */
