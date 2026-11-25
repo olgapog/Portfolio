@@ -444,16 +444,18 @@ h2 {
 .projects__card:nth-child(3) {
   transition-delay: 0.6s;
 }
-.projects__card:hover {
-  border-color: rgba(0, 245, 255, 0.4);
-  box-shadow: inset 0 0 0 0.1rem #00f5ff, 0 1.2rem 3.5rem rgba(0, 0, 0, 0.4), 0 0 2.5rem rgba(0, 245, 255, 0.4);
-}
-.projects__card:hover .projects__image {
-  transform: scale(1.05);
-  filter: brightness(0.6);
-}
-.projects__card:hover .projects__overlay {
-  opacity: 1;
+@media (hover: hover) {
+  .projects__card:hover {
+    border-color: rgba(0, 245, 255, 0.4);
+    box-shadow: inset 0 0 0 0.1rem #00f5ff, 0 1.2rem 3.5rem rgba(0, 0, 0, 0.4), 0 0 2.5rem rgba(0, 245, 255, 0.4);
+  }
+  .projects__card:hover .projects__image {
+    transform: scale(1.05);
+    filter: brightness(0.6);
+  }
+  .projects__card:hover .projects__overlay {
+    opacity: 1;
+  }
 }
 .projects__image-wrapper {
   width: 100%;
@@ -483,6 +485,13 @@ h2 {
   backdrop-filter: blur(0.4rem);
   opacity: 0;
   transition: opacity 0.4s ease;
+}
+@media (hover: none) {
+  .projects__overlay {
+    opacity: 1;
+    backdrop-filter: none;
+    background: rgba(0, 0, 0, 0.8);
+  }
 }
 @media (max-width: 767.98px) {
   .projects__overlay {
